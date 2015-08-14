@@ -1,12 +1,139 @@
 <html>
 <head></head>
 <body>
-<div class="container">
-<img src="ott-without-series.png" style="position:relative;"></img>
-<img src="series-opentv.png" style="left: 311px;
-    position: absolute;
-    top: 326px;"></img>
-</div>
+  <style media="screen">
+    .series{
+      width:100px;
+      height:150px;
+      /*display:flex;*/
+    }
+    .slideshow{
+      position:relative;
+      flex-direction:column;
+      top:201px;
+      left:230px;
 
+      width:716px;
+      height:150px;
+      overflow:hidden;
+    }
+    .slideshow ul {
+    /* 4 images donc 4 x 100% */
+   width: 1000%;
+   height: 150px;
+   padding:0; margin:0;
+   list-style: none;
+   display:inline-block;
+}
+.slideshow li {
+   float: left;
+
+}
+    .container{
+      background-image: url('ott-without-series.png');
+      background-repeat: no-repeat;
+      width:1100px;
+      height:824px;
+      background-position:left top;
+    }
+  </style>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<div class="container" id="ott">
+  <div class="slideshow" id="slideshow">
+
+  </div>
+</div>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+
+  var zone={
+    top:50,
+    left:230,
+    width:616,
+    height:50
+  };
+  var clipDimension={
+    width:100,
+    height:150
+  };
+  var pace=10;
+
+  var loadAllClips=function(clips){
+    $parent=$("<ul>");
+    $.each(clips,function(i,src){
+      console.log(i);
+      var $el=$("<img />").attr("src",src).addClass("series");
+      //$el.css("display","inline");
+
+      //$el.css("left",(zone.left)+"px");
+      $parent.append($("<li>").append($el));
+    });
+    $("#slideshow").append($parent)
+
+
+
+  };
+  var createImage=function(el){
+    var image = new Image();
+    image.src = el.src;
+
+    return image
+  };
+  var moveTile=function(el){
+    var left=parseInt($(el).css('left'));
+    $(el).animate({"left":zone.left+zone.width+clipDimension.width},2000);
+    //console.log(el);
+    console.log(zone.left+zone.width+clipDimension.width);
+    /*if(left>(zone.left+zone.width-clipDimension.width)){//if we are beyond the zone
+      el.style.left=zone.left-el.width+"px";
+      console.log("ok");
+    }
+    else {
+      //console.log(el.offsetLeft);
+      //console.log(left);
+      //console.log(el.style.left.replace("")+pace);
+      el.style.left=left+pace+"px";
+    }*/
+  }
+
+  loadAllClips([
+    "series-1.png",
+    "series-2.jpg",
+    "series-1.png",
+    "series-2.jpg",
+    "series-1.png",
+    "series-2.jpg",
+    "series-1.png",
+    "series-2.jpg",
+    "series-1.png",
+    "series-2.jpg",
+
+  ]);
+
+
+    $('.series').clearQueue();
+    //$(".series").each(function(i,val){
+    //  moveTile(val);
+    //});
+
+
+
+});
+$(function(){
+  var animate=function(){
+    $(".slideshow ul").animate({marginLeft:-300},10000,"linear",function(){
+       $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
+    });
+  };
+  var init=function(){
+    animate();
+    setInterval(animate,10000);
+  };
+  init();
+
+});
+</script>
 </body>
 </html>
