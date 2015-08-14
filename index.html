@@ -65,7 +65,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=1024" />
+    <meta name="viewport" content="width=1600" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
 
@@ -409,6 +409,10 @@ div#rightwing{
     }
 }
 or http://jsfiddle.net/QDyXP/
+
+circle animation with svg http://stackoverflow.com/questions/5230148/create-svg-progress-circle
+
+make a rope effect http://gamedevelopment.tutsplus.com/tutorials/simulate-fabric-and-ragdolls-with-simple-verlet-integration--gamedev-519
 </p>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
 <script src="js/impress.js"></script>
@@ -417,7 +421,8 @@ var api = impress();
 api.init();
 /*$(api).on("impress:init", function (event) {
   var api = event.detail.api;*/
-  $('.step').on('click',function(e){
+  $(window).on('click',function(e){
+    console.log(e.target);
     console.log("shdbfjjkkgh");
     console.log(api);
     window.api.next();
