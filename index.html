@@ -163,13 +163,14 @@
         It will not be rotated or scaled.
 
     -->
-    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-        <q>Aren't you just <b>bored</b> with all those slides-based presentations?</q>
-        <div id="bored-2" class="step slide" data-x="-2000" data-y="-1500" data-scale="1">
-          <q>
-            Some text
-          </q>
-        </div>
+    <div id="bored" class="step slide" data-x="-1000" data-y="-1500" data-scale="1">
+      <p class="title">
+        <img src="img/group.jpg" alt="" />
+        Présentation stage Kudelski
+      </p>
+      <p class="slide-content">
+        par Thomas Ricci
+      </p>
     </div>
 
     <!--
@@ -187,14 +188,77 @@
         Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
 
     -->
-    <div class="step slide" data-x="0" data-y="-1500">
-        <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
+    <div class="step slide" data-x="1000" data-y="-1500" data-scale="2">
+      <p class="title">
+        En bref...
+      </p>
+      <div class="slide-content">
+        <ol class="toc">
+          <li>Le groupe Kudelski</li>
+          <li>Mon envirronement de travail</li>
+          <li>Mon travail</li>
+          <li>Mes recommendations pour le prochains stagiaire</li>
+          <li>Conclusions</li>
+        </ol>
+      </div>
     </div>
 
-    <div class="step slide" data-x="1000" data-y="-1500">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
-    </div>
+    <div class="step slide" data-x="3000" data-y="-1500">
+        <p class="title">
+          Le groupe
+        </p>
+        <div class="slide-content">
+          <ol class="toc">
+            <li style="" id="clock">
+              <div class="clock">
+                <div class="top"></div>
+                <div class="right"></div>
+                <div class="bottom"></div>
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="second"></div>
+              </div>
+              L'historique du groupe</li>
+            <li><img src="img/work.png" alt=""  style=""/>Ces activités</li>
+            <div id="earth">
 
+            </div><li>Répartition géographique</li>
+          </ol>
+        </div>
+    </div>
+    <div class="step slide" data-x="3000" data-y="-1500" data-z="-5000">
+      <p class="title">
+        Historique
+      </p>
+      <div class="slide-content">
+        <div class="bar"></div>
+        <div id="timeline" class="timeline">
+          <div class="entry">
+              <h1>1990</h1>
+              <h2>Entry Title</h2>
+              <img src="http://dummyimage.com/300x200/000/fff"/>
+              Here's the info about this date
+          </div>
+          <div class="entry">
+              <h1>1995</h1>
+              Here's the info about this date
+          </div>
+          <div class="entry">
+              <h1>2000</h1>
+              Here's the info about this date
+          </div>
+          <div class="entry">
+              <h1>2005</h1>
+              Here's the info about this date
+          </div>
+          <div class="entry">
+              <h1>2010</h1>
+              Here's the info about this date
+          </div>
+        </div>
+      </div>
+
+    </div>
     <!--
 
         This is an example of step element being scaled.
@@ -204,7 +268,7 @@
         From presentation and transitions point of view it means, that it will have to be scaled
         down (4 times) to make it back to its correct size.
 
-    -->
+    --
     <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
         <span class="try">then you should try</span>
         <h1>impress.js<sup>*</sup></h1>
@@ -218,7 +282,7 @@
         Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
         element should be rotated by 90 degrees clockwise.
 
-    -->
+    --
     <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
         <p>It's a <strong>presentation tool</strong> <br/>
         inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
@@ -237,7 +301,7 @@
         `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
         positioned far away from us (by 3000px).
 
-    -->
+    --
     <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
         <p>and <b>tiny</b> ideas</p>
     </div>
@@ -261,7 +325,7 @@
         So basically every step element has one of three classes: `future`, `present` and `past`.
         Only one current step has the `present` class.
 
-    -->
+    --
     <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
         <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
     </div>
@@ -290,7 +354,7 @@
         You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
         as `data-rotate` (these two are basically aliases).
 
-    -->
+    --
     <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
         <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
         <span class="footnote">* beat that, prezi ;)</span>
@@ -310,9 +374,9 @@
         These values are used by impress.js in CSS transformation functions, so for more information consult
         CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
 
-    -->
+    --
     <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
-    </div>
+    </div> -->
 
 </div>
 
@@ -364,7 +428,7 @@ if ("ontouchstart" in document.documentElement) {
     Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
 
 -->
-<p>
+<p style="display:none;">
   text shadow http://www.zachstronaut.com/lab/smoke.html
   for animated wings (rightwing animation)
 div#rightwing{
@@ -425,11 +489,43 @@ api.init();
     console.log(e.target);
     console.log("shdbfjjkkgh");
     console.log(api);
-    window.api.next();
+    //window.api.next();
     //impress();
   });
 //});
 
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(document).on("keyup",function(event){
+      console.log(event);
+
+      if (event.target=="body.impress-supported.impress-enabled.impress-on-step-4"&&(event.keyCode === 9 || ( event.keyCode >= 32 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) )) {
+          switch( event.keyCode ) {
+              case 33: // pg up
+              case 37: // left
+              case 38: // up
+                      $this=$("#timeline");
+                      $this.css("transform","translatex(-500px)");
+                      $this.css("transition","transform 1s");
+                       break;
+              case 9:  // tab
+              case 32: // space
+              case 34: // pg down
+              case 39: // right
+              case 40: // down
+                      $this=$("#timeline");
+                      $this.css("transform","translatex(500px)");
+                      $this.css("transition","transform 1s");
+                       break;
+          }
+
+          event.preventDefault();
+          return false;
+      }
+
+    });
+  });
 </script>
 
 <!--
