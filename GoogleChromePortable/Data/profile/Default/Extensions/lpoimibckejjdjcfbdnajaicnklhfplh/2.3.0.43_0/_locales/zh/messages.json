@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": ""
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "安全键盘"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "已启用安全键盘输入"
+   }
+}

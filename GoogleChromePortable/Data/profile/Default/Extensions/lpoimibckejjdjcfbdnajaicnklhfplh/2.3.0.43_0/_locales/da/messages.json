@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Beskyt betalinger, bloker farlige websteder, og indtast oplysninger sikkert med denne udvidelse fra Kaspersky Lab"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Virtuelt Tastatur"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Sikker tastaturindtastning er aktiveret"
+   }
+}

@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Kaspersky-Lab-Plug-in: Schutz für Zahlungen, Blockieren von gefährlichen Webseiten und sichere Dateneingabe"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Virtuelle Tastatur"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Schutz für Tastatureingaben ist aktiviert"
+   }
+}

@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Bảo vệ các khoản thanh toán, chặn các trang web nguy hiểm, và nhập thông tin an toàn với phần mở rộng từ Kaspersky Lab"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Bàn phím ảo"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Bảo mật dữ liệu nhập từ bàn phím được cho phép"
+   }
+}

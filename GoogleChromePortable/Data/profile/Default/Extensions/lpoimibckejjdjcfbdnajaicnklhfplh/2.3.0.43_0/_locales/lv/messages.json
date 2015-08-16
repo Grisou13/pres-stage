@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Aizsargājiet maksājumus, bloķējiet bīstamas vietnes un droši ievadiet informāciju ar šo Kaspersky Lab paplašinājumu"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Virtuālā klaviatūra"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Droša klaviatūras ievade ir iespējota"
+   }
+}

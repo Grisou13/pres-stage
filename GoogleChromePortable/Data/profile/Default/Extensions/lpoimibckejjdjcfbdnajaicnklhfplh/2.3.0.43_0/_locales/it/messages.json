@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Un'estensione di Kaspersky Lab per proteggere i pagamenti, bloccare i siti Web pericolosi e immettere i dati in modo protetto"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Tastiera Virtuale"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Immissione sicura tramite tastiera abilitata"
+   }
+}

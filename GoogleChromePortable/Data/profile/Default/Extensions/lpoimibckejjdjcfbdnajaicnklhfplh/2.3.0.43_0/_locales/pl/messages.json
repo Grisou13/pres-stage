@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": ""
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Klawiatura wirtualna"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Bezpieczne wprowadzanie z klawiatury jest włączone"
+   }
+}

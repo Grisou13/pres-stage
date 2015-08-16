@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Προστασία πληρωμών, αποκλεισμός επικίνδυνων δικτυακών τόπων και ασφαλής εισαγωγή πληροφοριών με την επέκταση της Kaspersky Lab"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Εικονικό πληκτρολόγιο"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Η ασφαλής εισαγωγή πληκτρολογίου είναι ενεργοποιημένη"
+   }
+}

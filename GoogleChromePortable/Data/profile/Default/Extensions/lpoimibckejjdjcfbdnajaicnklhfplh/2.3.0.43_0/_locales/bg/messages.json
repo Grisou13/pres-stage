@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": ""
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Защита Kaspersky"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Виртуална клавиатура"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Защитеното въвеждане от клавиатурата е включено"
+   }
+}

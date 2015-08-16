@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Защита платежей, блокирование опасных веб-сайтов и безопасный ввод данных с расширением от \"Лаборатории Касперского\""
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Виртуальная клавиатура"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Включена защита ввода с клавиатуры"
+   }
+}

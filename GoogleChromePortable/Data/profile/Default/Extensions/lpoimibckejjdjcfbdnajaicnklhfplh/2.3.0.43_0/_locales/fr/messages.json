@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Protection de paiements, blocage des sites dangereux et saisie sécurisée des données avec l'extension de Kaspersky Lab"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Clavier virtuel"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "La protection de la saisie au clavier est activée"
+   }
+}

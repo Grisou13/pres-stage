@@ -1,0 +1,14 @@
+{
+   "CommandAdd": {
+      "description": "",
+      "message": "Ajouter dans l'Anti-bannière"
+   },
+   "ExtensionDescription": {
+      "description": "",
+      "message": ""
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Anti-bannière"
+   }
+}

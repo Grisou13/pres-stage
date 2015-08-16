@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "使用卡巴斯基實驗室的延伸功能，來防護支付、封鎖危險網站並安全資料輸入。"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "卡巴斯基防護"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "虛擬鍵盤"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "安全資料輸入已經啟用"
+   }
+}

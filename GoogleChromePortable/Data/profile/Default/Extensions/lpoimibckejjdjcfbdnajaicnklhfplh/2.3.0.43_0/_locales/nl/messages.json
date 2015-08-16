@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": ""
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Bescherming"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Virtueel Toetsenbord"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Veilige toetsenbordinvoer is ingeschakeld"
+   }
+}

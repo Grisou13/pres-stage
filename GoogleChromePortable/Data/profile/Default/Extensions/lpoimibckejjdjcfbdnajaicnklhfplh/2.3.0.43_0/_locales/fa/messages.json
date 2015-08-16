@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "با این برنامه افزودنی از Kaspersky Lab از پرداخت ها محافظت کنید، وب سایت های خطرناک را مسدود و اطلاعات را به صورت ایمن وارد نمایید"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "صفحه کلید مجازی"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "ورودی امن از صفحه کلید فعال است"
+   }
+}

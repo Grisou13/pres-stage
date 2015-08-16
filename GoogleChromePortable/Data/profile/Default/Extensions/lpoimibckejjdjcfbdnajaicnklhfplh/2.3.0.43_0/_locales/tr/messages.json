@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Bu Kaspersky Lab uzantısıyla ödemeleri koruyun, tehlikeli web sitelerini engelleyin ve bilgileri güvenli bir şekilde girin"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Sanal Klavye"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Güvenli klavye girişi etkin"
+   }
+}

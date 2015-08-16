@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Suojaa maksutapahtumia, estä vaarallisten sivustojen käyttö ja syötä tietoja turvallisesti tällä Kaspersky Labin laajennuksella"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Virtuaalinen näppäimistö"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Suojattu näppäimistön syöttötila on päällä"
+   }
+}

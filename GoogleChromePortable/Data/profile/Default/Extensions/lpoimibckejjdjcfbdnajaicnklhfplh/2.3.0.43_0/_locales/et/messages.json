@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": ""
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Kaitse"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Virtuaalklaviatuur"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Klaviatuurikaitse on sisse lülitatud"
+   }
+}

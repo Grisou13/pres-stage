@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": ""
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky védelem"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Virtuális billentyűzet"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Biztonságos adatbevitel a billentyűzetről engedélyezve van"
+   }
+}

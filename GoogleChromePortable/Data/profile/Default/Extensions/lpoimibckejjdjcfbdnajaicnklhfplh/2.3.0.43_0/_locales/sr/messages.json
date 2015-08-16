@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Заштитите плаћања, блокирајте штетне Web локације, и безбедно уносите информације са овим Kaspersky Lab додатком"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Виртуелна тастатура"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Омогућен је безбедан унос са тастатуре"
+   }
+}

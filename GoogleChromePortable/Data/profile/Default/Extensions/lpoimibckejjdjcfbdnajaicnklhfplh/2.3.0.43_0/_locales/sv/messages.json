@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Skydda betalningar, blockera farliga webbplatser och ange information säkert med det här tillägget från Kaspersky Lab"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Virtuellt tangentbord"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Säker tangentinmatning har aktiverats"
+   }
+}

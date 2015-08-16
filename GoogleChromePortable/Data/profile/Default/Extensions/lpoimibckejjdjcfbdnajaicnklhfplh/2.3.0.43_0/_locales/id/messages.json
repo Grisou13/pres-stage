@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": ""
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Virtual Keyboard"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Secure keyboard input is enabled"
+   }
+}

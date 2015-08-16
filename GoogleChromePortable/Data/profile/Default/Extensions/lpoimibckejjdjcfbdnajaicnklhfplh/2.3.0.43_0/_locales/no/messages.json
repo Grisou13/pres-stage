@@ -1,0 +1,21 @@
+﻿{
+    "ExtensionName": {
+        "message": "Kaspersky Protection",
+        "description": ""
+    },
+	
+    "ExtensionDescription": {
+        "message": "Beskytt betalinger, blokker farlige webområder og angi informasjon på en trygg måte med denne utvidelsen fra Kaspersky Lab",
+        "description": ""
+    },
+
+    "ToolbarButtonText": {
+        "message": "Virtuelt tastatur",
+        "description": ""
+    },
+
+	"TooltipText": {
+        "message": "Sikkert tastaturinput er aktivert",
+        "description": ""
+    }
+}

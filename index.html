@@ -1,67 +1,5 @@
 <!doctype html>
 
-<!--
-
-    Welcome to the light side of the source, young padawan.
-
-    One step closer to learn something interesting you are...
-
-                               ____
-                            _.' :  `._
-                        .-.'`.  ;   .'`.-.
-               __      / : ___\ ;  /___ ; \      __
-             ,'_ ""=-.:__;".-.";: :".-.":__;.-="" _`,
-             :' `.t""=-.. '<@.`;_  ',@:` ..-=""j.' `;
-                  `:-.._J '-.-'L__ `-.-' L_..-;'
-                    "-.__ ;  .-"  "-.  : __.-"
-                        L ' /.======.\ ' J
-                         "-.   "__"   .-"
-                        __.l"-:_JL_;-";.__
-                     .-j/'.;  ;""""  / .'\"-.
-                   .' /:`. "-.:     .-" .';  `.
-                .-"  / ;  "-. "-..-" .-"  :    "-.
-             .+"-.  : :      "-.__.-"      ;-._   \
-             ; \  `.; ;                    : : "+. ;
-             :  ;   ; ;                    : ;  : \:
-             ;  :   ; :                    ;:   ;  :
-            : \  ;  :  ;                  : ;  /  ::
-            ;  ; :   ; :                  ;   :   ;:
-            :  :  ;  :  ;                : :  ;  : ;
-            ;\    :   ; :                ; ;     ; ;
-            : `."-;   :  ;              :  ;    /  ;
-             ;    -:   ; :              ;  : .-"   :
-             :\     \  :  ;            : \.-"      :
-              ;`.    \  ; :            ;.'_..-=  / ;
-              :  "-.  "-:  ;          :/."      .'  :
-               \         \ :          ;/  __        :
-                \       .-`.\        /t-""  ":-+.   :
-                 `.  .-"    `l    __/ /`. :  ; ; \  ;
-                   \   .-" .-"-.-"  .' .'j \  /   ;/
-                    \ / .-"   /.     .'.' ;_:'    ;
-                     :-""-.`./-.'     /    `.___.'
-                           \ `t  ._  /
-                            "-.t-._:'
-
--->
-
-<!--
-
-    So you'd like to know how to use impress.js?
-
-    You've made the first, very important step - you're reading the source code.
-    And that's how impress.js presentations are built - with HTML and CSS code.
-
-    Believe me, you need quite decent HTML and CSS skills to be able to use impress.js effectively.
-    More importantly, you need to be a designer. There are no default styles or layouts for impress.js presentations.
-
-    You need to design and build it by hand.
-
-    So...
-
-    Would you still like to know how to use impress.js?
-
--->
-
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -71,8 +9,9 @@
 
     <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
     <meta name="author" content="Bartek Szopka" />
-
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+<script src="http://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+<script src="js/jquery.path.js" charset="utf-8"></script>
+    <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />-->
     <link rel="stylesheet" href="css/print.css" media="print" charset="utf-8">
     <!--
 
@@ -95,24 +34,6 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
 
-<!--
-
-    Body element is used by impress.js to set some useful class names, that will allow you to detect
-    the support and state of the presentation in CSS or other scripts.
-
-    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
-    support features required by impress.js, so you should apply some fallback styles in your CSS.
-    It's not necessary to add it manually on this element. If the script detects that browser is not
-    good enough it will add this class, but keeping it in HTML means that users without JavaScript
-    will also get fallback styles.
-
-    When impress.js script detects that browser supports all required features, this class name will
-    be removed.
-
-    The class name on body element also depends on currently active presentation step. More details about
-    it can be found later, when `hint` element is being described.
-
--->
 <body class="impress-not-supported">
 
 <!--
@@ -269,21 +190,308 @@
       </p>
       <div class="slide-content">
         <div class="box">
-          <span class="digital-tv"></span>
+          <span class="digital-tv">
+            <div class="container" id="ott">
+              <div class="slideshow" id="slideshow">
+
+              </div>
+            </div>
+
+            <script type="text/javascript">
+            $(document).ready(function(){
+
+
+              var zone={
+                top:50,
+                left:230,
+                width:616,
+                height:50
+              };
+              var clipDimension={
+                width:100,
+                height:150
+              };
+              var pace=10;
+
+              var loadAllClips=function(clips){
+                $parent=$("<ul>");
+                $.each(clips,function(i,src){
+                  console.log(i);
+                  var $el=$("<img />").attr("src",src).addClass("series");
+                  //$el.css("display","inline");
+
+                  //$el.css("left",(zone.left)+"px");
+                  $parent.append($("<li>").append($el));
+                });
+                $("#slideshow").append($parent)
+
+
+
+              };
+              var createImage=function(el){
+                var image = new Image();
+                image.src = el.src;
+
+                return image
+              };
+              var moveTile=function(el){
+                var left=parseInt($(el).css('left'));
+                $(el).animate({"left":zone.left+zone.width+clipDimension.width},2000);
+                //console.log(el);
+                console.log(zone.left+zone.width+clipDimension.width);
+                /*if(left>(zone.left+zone.width-clipDimension.width)){//if we are beyond the zone
+                  el.style.left=zone.left-el.width+"px";
+                  console.log("ok");
+                }
+                else {
+                  //console.log(el.offsetLeft);
+                  //console.log(left);
+                  //console.log(el.style.left.replace("")+pace);
+                  el.style.left=left+pace+"px";
+                }*/
+              }
+
+              loadAllClips([
+                "img/opentv/series/1.jpg",
+                "img/opentv/series/2.png",
+                "img/opentv/series/3.jpg",
+                "img/opentv/series/4.jpg",
+                "img/opentv/series/5.jpg",
+                "img/opentv/series/6.jpg",
+                "img/opentv/series/7.jpg",
+                "img/opentv/series/8.jpg",
+                "img/opentv/series/9.jpg",
+                "img/opentv/series/10.jpg",
+                "img/opentv/series/11.jpg",
+              ]);
+
+
+                $('.series').clearQueue();
+                //$(".series").each(function(i,val){
+                //  moveTile(val);
+                //});
+
+
+
+            });
+            $(function(){
+              var animate=function(){
+                $(".slideshow ul").animate({marginLeft:-300},7500,"linear",function(){
+                   $(this).css({marginLeft:0}).find("li:first").after($(this).find("li:last"));
+
+                });
+              };
+              var init=function(){
+                animate();
+                setInterval(animate,7500);
+              };
+              init();
+
+            });
+            </script>
+          </span>
         </div>
         <div class="box">
-          <img src="img/skidata/skidata-fond.png" alt="" style="display: block;position:absolute;
-    height: auto;
-    max-width: 100%;" />
-          <img src="img/skidata/skidata-aile.png" class="wing" alt="" style="" />
+          <img src="img/skidata/skidata-2.png" style="width:30%;" alt="" class="skidata" />
+          <!--<img src="img/skidata/skidata-aile.png" class="wing" alt="" style="" />-->
         </div>
         <div class="box">
-          <span class="secure"></span>
+          <div class="secure">
+            <img src="img/ks/ks.png" style="left:-602px" alt="" />
+            <!--<img src="img/ks/4.png" class="round" style="position:absolute;"alt="" />
+            <img src="img/ks/lock.png" class="lock" style="position:absolute;" alt="" />-->
+          </div>
         </div>
       </div>
     </div>
     <div class="step slide" data-x="4000" data-y="-1500" data-z="-5000">
+      <p class="title">
+        Répartition géographique du groupe
+      </p>
+      <div class="slide-content">
+        <img src="img/rep-geo.png" style="margin:auto;width:100%" alt="" />
+      </div>
     </div>
+    <div class="step slide" data-x="5000" data-y="-1500" data-z="0" >
+      <p class="title">
+        Mon envirronement de travail
+      </p>
+      <div class="slide-content">
+        <div class="dtv-team">
+          <figure class="org-chart cf">
+          <ul class="">
+            <li>
+              <ul class="department dep-a">
+                <a href="#"><span>DTV</span></a>
+                <li>
+                  <ul class="sections">
+                    <li class="section"><a href="#"><span>R&D</span></a></li>
+                    <li class="section" style="    border-left: 4px solid #fff;"><a href="#"><span>Medialive</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          </figure>
+          <!--<p>
+            DTV
+          </p>
+          <p>
+            R&D
+          </p>
+          <p>
+            Medialive
+          </p>-->
+        </div>
+        <div class="it-team">
+          <figure class="org-chart cf">
+            <ul class="administration">
+        <li>
+          <ul class="director">
+            <li>
+              <a href="#"><span>IT</span></a>
+              <ul class="subdirector">
+                <li style=""><a style="height:300px;" href="#"><span style="margin-top: -100px;"><p>Entreprise Portal</p> <img src="img/portrait/jkl.jpg" width="40%" alt="" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="40%" src="img/portrait/vfi.jpg" alt="" /></span></a></li>
+              </ul>
+              <ul class="departments cf">
+                <li><a href="#"><span>IT System</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+          </figure>
+          <!--<p>
+            IT
+          </p>
+          <p>
+            Entreprise Portal
+          </p>
+          <p>
+            IT System
+          </p>-->
+        </div>
+      </div>
+    </div>
+
+    <div class="step slide" data-x="7000" data-y="-1500" data-z="0" data-rotate="90">
+      <p class="title">
+        Mon travail
+      </p>
+      <div class="slide-content">
+        <ol class="">
+          <li>Medialive Issue reporter</li>
+
+          <li>Automatisation de sauvegardes</li>
+          <li>Les CMS</li>
+        </ol>
+
+      </div>
+    </div>
+    <div class="step slide" data-x="6000" data-y="-1500" data-z="-2000" data-rotate="90">
+      <p class="title">
+        Medialive Issue reporter
+      </p>
+      <div class="slide-content">
+        <img src="img/issue-reporter.png" style="margin:auto;width: 70%;
+    margin-top: -50px;    margin-left: 113px;" alt="" />
+      </div>
+    </div>
+    <div class="step slide" data-x="8000" data-y="-1500" data-z="-2000" data-rotate="90">
+      <p class="title">
+        Automatisations de sauvegardes
+      </p>
+      <div class="slide-content">
+        <img src="img/save-4.gif" style="margin-left:40%;" alt="" />
+      </div>
+    </div>
+    <div id="slide-cms" class="step slide" data-x="9000" data-y="-1500" data-z="0" data-rotate="90">
+      <p class="title">
+        Les CMS
+      </p>
+      <div class="slide-content">
+        <div class="cms">
+          <img id="joomla" src="img/cms/joomla.png"  alt="" />
+          <img id="drupal" src="img/cms/drupal.png" alt="" />
+          <img id="wordpress" src="img/cms/wordpress.png" alt="" />
+          <img id="cq5" src="img/cms/cq5.png" alt="" />
+        </div>
+      </div>
+      <script type="text/javascript">
+      var Paths = {"arc":[]}
+      var path_fns = {
+         arc: function(i) {
+           return new $.path.arc({
+             center: [285,185],
+         		radius: 100,
+         		start: -i*20,
+         		end: i*100,
+         		dir: (i%2) ? 1 : -1
+           })
+         }
+
+       }
+       $("#slide-cms").change(function(e){
+         console.log("asd");
+       });
+       //$("#joomla").animate({$.path.arc({center: [285,185],radius: 100,start: 0,end: 100, dir: 1})},2000);
+       $(".active.present #joomla").animate({left:"100px",top:"-50px"}, 1000)
+       $(".active.present #wordpress").animate({left:"-100px",top:"-50px"}, 1000)
+       $(".active.present #cq5").animate({left:"100px",top:"50px"}, 1000)
+       $(".active.present #drupal").animate({left:"-100px",top:"50px"}, 1000)
+      </script>
+    </div>
+    <div class="step slide" data-x="10000" data-y="-1500" data-z="-2000" data-rotate="90">
+      <p class="title">
+        Mon travail avec les CMS
+      </p>
+      <div class="slide-content">
+        <ol class="my-work-cms">
+          <li>
+            <div class="">
+              Migration SmarDTV<br><br>
+              <div class="box" style="height:50px;">
+                <img id="" width="40px" src="img/cms/joomla.png" style="    width: 75px;
+    height: 75px;"  alt="" />
+                <hr style="margin: 0;
+      display: block;width:100px;height:2px;margin-left:10px;margin-top:27px">
+                <img id="" width="40px" src="img/cms/drupal.png" style="    width: 110px;
+    height: 75px;" alt="" />
+              </div>
+
+            </div>
+          </li>
+          <li>
+            Medialive & Medialive SP<br> website<br><br>
+            <img id="" width="40px" src="img/cms/drupal.png" style="    width: 110px;
+height: 75px;" alt="" />
+          </li>
+          <li>IBCap website
+            <br><br>
+            <img src="img/cms/ibcap.png" width="300px" alt="" />
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="step slide" data-x="11000" data-rotate="180" data-y="1000" data-z="0">
+      <p class="title">
+        Mes recommendations
+      </p>
+      <div class="slide-content">
+        <ol>
+          <li>Chercher l'information</li>
+          <li>Demander du travail</li>
+          <li>Prendre des notes</li>
+          <li>S'adapter et être souple</li>
+        </ol>
+      </div>
+
+    </div>
+      <div class="step slide" data-x="500" data-rotate="180" data-y="1000"  data-scale="3">
+        <p class="title">
+          Un mot de fin
+        </p>
+      </div>
     <!--
 
         This is an example of step element being scaled.
@@ -428,10 +636,10 @@
 
     Just sayin' ;)
 
--->
+--
 <div class="hint">
     <p>Use a spacebar or arrow keys to navigate</p>
-</div>
+</div>-->
 <script>
 if ("ontouchstart" in document.documentElement) {
     document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
@@ -465,7 +673,7 @@ div#rightwing{
     background-image: url(http://www.eleqtriq.com/wp-content/static/demos/2010/css3d/img/wing.png);
     background-repeat:no-repeat;
 
-    -webkit-transform: rotate3d(0, 0, 0, 20deg); /* Mirror left wing */
+    -webkit-transform: rotate3d(0, 0, 0, 180deg); /* Mirror left wing */
     -webkit-transform-origin: center right;
     -webkit-animation-name: rightwingani;
     -webkit-animation-duration: 1s;
@@ -503,7 +711,7 @@ circle animation with svg http://stackoverflow.com/questions/5230148/create-svg-
 
 make a rope effect http://gamedevelopment.tutsplus.com/tutorials/simulate-fabric-and-ragdolls-with-simple-verlet-integration--gamedev-519
 </p>
-<script src="http://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+
 <script src="js/impress.js"></script>
 <script>
 var api = impress();

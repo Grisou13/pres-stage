@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": ""
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Ochrana Kaspersky"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Virtuální klávesnice"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Zabezpečené psaní na klávesnici je povoleno"
+   }
+}

@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Protejează plățile, blochează site-urile web periculoase și introdu informații în siguranță cu această extensie de la Kaspersky Lab"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Tastatură Virtuală"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Introducerea în siguranţă de la tastatură este activată"
+   }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="skidata-container">
+      <!--<img src="skidata-aile.png" class="wing" alt="" style="" />-->
+      <svg>
+      <path id="wing" d="M105.78,75.09c4.56,0,8.84,1.13,12.62,3.11c0,0,0.01-0.01,0.01-0.01l36.23,12.38c0,0-13.78,30.81-41.96,38.09
+            c-1.51,0.39-2.82,0.59-3.99,0.62c-0.96,0.1-1.92,0.16-2.9,0.16c-15.01,0-27.17-12.17-27.17-27.17
+            C78.61,87.26,150.78,95.09,105.78,75.09"/>
+      </svg>
+    </div>
+
+
+    <style media="screen">
+    .skidata-container{
+      background-image: url("skidata-fond.png");
+      background-repeat: no-repeat;
+      background-size: auto;
+      width:700px;
+      height:500px;
+    }
+    #wing{
+      position: relative;
+      right: 482px;
+      top: -95px;
+      /*transform: rotate(28deg);*/
+      width: 20px;
+      background-image: url("skidata-aile.png");
+      background-repeat: no-repeat;
+        /*width: 178px;
+        height: 208px;*/
+        /*background-image: url(http://www.eleqtriq.com/wp-content/static/demos/2010/css3d/img/wing.png);
+        background-repeat:no-repeat;*/
+
+        /*-webkit-transform: rotate3d(0, 0, 0, 160deg);
+        -webkit-transform-origin: center right;
+        -webkit-animation-name: rightwingani;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: ease-in-out;*/
+
+
+    }
+
+    @-webkit-keyframes rightwingani { /*add some percentage to try and make it smoother*/
+        from {
+            -webkit-transform: rotate3d(1, 2, -2, -110deg);
+        }
+        /*10% {
+            -webkit-transform: rotate3d(0, 1, 0, 130deg);
+        }
+        30% {
+            -webkit-transform: rotate3d(0, 1, 0, 100deg);
+        }
+        50% {
+            -webkit-transform: rotate3d(0, 1, 0, 70deg);
+        }
+        70%{
+            -webkit-transform: rotate3d(0, 1, 0, 100deg);
+        }
+        90%{
+            -webkit-transform: rotate3d(0, 1, 0, 120deg);
+        }*/
+        to{
+            -webkit-transform: rotate3d(1, 2, -2, -180deg);
+        }
+    }
+    </style>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+    </script>
+  </body>
+</html>

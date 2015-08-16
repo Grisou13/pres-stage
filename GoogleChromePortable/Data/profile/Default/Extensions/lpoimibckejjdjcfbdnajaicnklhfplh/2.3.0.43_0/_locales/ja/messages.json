@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Kaspersky Lab のこの拡張機能を使用すると、決済を保護したり、危険な Web サイトをブロックしたり、情報を安全に入力したりできます"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "カスペルスキー プラグイン"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "セキュリティキーボード"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "入力情報の漏えい防止が有効です"
+   }
+}

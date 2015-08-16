@@ -1,0 +1,32 @@
+{
+   "background": {
+      "page": "background/main.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": "images/kbrd-mini.png",
+      "default_title": "__MSG_ToolbarButtonText__",
+      "permissions": [ "tabs", "http://*/", "https://*/" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content_scripts/content_blocker/content.js", "content_scripts/virtual_keyboard/keypress_emulator.js", "content_scripts/virtual_keyboard/keypress_emulator_chrome.js", "content_scripts/virtual_keyboard/protectable_element_detector.js", "content_scripts/virtual_keyboard/icon_injector.js", "content_scripts/virtual_keyboard/icon_helper.js", "content_scripts/virtual_keyboard/tooltip.js", "content_scripts/virtual_keyboard/once_timed_tooltip.js", "content_scripts/virtual_keyboard/element_screen_position.js", "content_scripts/virtual_keyboard/tsf_composition_view.js", "content_scripts/virtual_keyboard/tsf_editor.js", "content_scripts/virtual_keyboard/tsf_editors_manager.js", "content_scripts/virtual_keyboard/content.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "permissions": [ "tabs", "http://*/", "https://*/", "chrome://*/" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_ExtensionDescription__",
+   "icons": {
+      "128": "images/kaspersky_protection_plugin.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjciLSUmKCxNnZ8bMjf3u2cdOuYy160h1gTAQRTJAfm7VulY7FKBtKa8bIQMpgvUgyHPgjy5hpVSe75l2NWBTu5Limab98O1YbytgPVOftLW0z645MHjxCeR/Qyth7oBs4wTd235cvlXbYgrom8TcRC4C8wj6BStS1dulWYOgYs41A5Ofmdqfp66VG3g2KKdyd/CkSKByfeNhDtbTG2IYKNsN21onwLITiFgjcXs3l/dkYuRRbXwzhMBVqJx9niyDwgPYTOwXwVgQbmMwN2mt66wR8dfhvB1HUrbMkv1ua8UbefykAPVXC4Mwk/W4tv/6ZhrVfUldDmjPaPbe+hYWowIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "22.0.0.0",
+   "name": "__MSG_ExtensionName__",
+   "permissions": [ "management", "cookies", "nativeMessaging", "contextMenus", "webNavigation", "webRequest", "webRequestBlocking", "tabs", "http://*/", "https://*/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.3.0.43",
+   "web_accessible_resources": [ "pages/content_blocked.html", "pages/content_blocked.js" ]
+}

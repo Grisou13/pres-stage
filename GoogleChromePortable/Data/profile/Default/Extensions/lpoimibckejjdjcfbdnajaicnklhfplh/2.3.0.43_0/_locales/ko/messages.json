@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": ""
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "보안 키보드"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "키보드 입력 보안을 사용하고 있습니다"
+   }
+}

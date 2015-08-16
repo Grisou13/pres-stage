@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Protect payments, block dangerous websites, and enter information securely with this extension from Kaspersky Lab"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Virtual Keyboard"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "Secure keyboard input is enabled"
+   }
+}

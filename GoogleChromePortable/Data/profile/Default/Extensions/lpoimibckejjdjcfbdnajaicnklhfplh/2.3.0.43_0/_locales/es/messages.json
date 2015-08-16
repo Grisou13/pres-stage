@@ -1,0 +1,18 @@
+{
+   "ExtensionDescription": {
+      "description": "",
+      "message": "Proteja los pagos, bloquee sitios web peligrosos e introduzca información de forma segura con esta extensión de Kaspersky Lab"
+   },
+   "ExtensionName": {
+      "description": "",
+      "message": "Kaspersky Protection"
+   },
+   "ToolbarButtonText": {
+      "description": "",
+      "message": "Teclado virtual"
+   },
+   "TooltipText": {
+      "description": "",
+      "message": "La entrada segura desde el teclado está activada"
+   }
+}
